@@ -1,0 +1,31 @@
+{
+  "name": "instagramify-backend",
+  "version": "1.0.0",
+  "description": "clone of instagram",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+   "server": "nodemon backend/server",
+   "client": "npm start --prefix frontend",
+   "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "author": "Rajat Mehra",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.5",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.6.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "react-icons": "^4.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "nodemon": "^2.0.7"
+  }
+}

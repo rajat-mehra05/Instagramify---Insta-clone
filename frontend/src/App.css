@@ -1,0 +1,555 @@
+@import url("https://fonts.googleapis.com/css2?family=Girassol&family=Goblin+One&family=Texturina:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Texturina, serif;
+}
+
+body {
+  background: linear-gradient(rgb(206, 206, 194), transparent),
+    linear-gradient(-45deg, rgb(87, 252, 175), transparent),
+    linear-gradient(45deg, rgb(248, 250, 135), transparent);
+  background-blend-mode: multiply;
+}
+
+.navbar {
+  background-color: #000000;
+}
+
+.nav-toggle {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 40 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  border-color: rgb(255, 102, 203);
+}
+
+.search-icon {
+  color: #2e7183;
+  font-size: 1.2rem;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  color: #daeecc;
+  transition: all 0.3s;
+}
+
+.modal {
+  max-width: 400px;
+  width: 400px;
+  height: 300px;
+  margin: 2rem 0 0 20rem;
+}
+
+.modal-content {
+  padding: 2rem 2.5rem;
+}
+
+.modal-content > input {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.collection-item {
+  list-style: none;
+  text-decoration: none;
+}
+
+.collection-item:hover {
+  color: #85100e;
+}
+
+.close-btn {
+  background-color: #2d3033;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.close-btn:hover {
+  background-color: black;
+  transition: all 0.3s;
+}
+
+.nav-links {
+  color: #2e7183;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+.nav-toggle {
+  color: white;
+}
+
+.nav-links:hover {
+  color: #daeecc;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.logout-btn {
+  background-color: red;
+  margin-left: 1rem;
+  padding: 0.3rem;
+}
+
+.logout-btn:hover {
+  color: #daeaf6;
+  background-color: #85100e;
+  transition: all 0.5s;
+}
+
+/* auth css --------- */
+.auth-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+  height: calc(100vh - 56px);
+  background-image: url("https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg");
+  background-position-x: bottom;
+  background-position-y: bottom;
+}
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 450px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 4rem;
+  border-radius: 10px;
+  padding: 1.2rem 1.2rem;
+  @media (max-width: 600px) {
+    padding: 1rem;
+  }
+}
+
+.input {
+  outline: none;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: inherit;
+  border-bottom: 2px solid #ccc;
+  margin: 0.6rem 0rem;
+  letter-spacing: 1.4px;
+}
+
+.input:focus {
+  border-bottom: 1px solid black;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+.logo-name {
+  color: rgb(48, 45, 53);
+  text-decoration: none;
+  font-size: 2.4rem;
+}
+
+.description-text {
+  color: rgb(48, 45, 53);
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.authText {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.auth-nav-link {
+  text-decoration: none;
+  color: #155bff;
+  font-size: 1.2rem;
+}
+
+.auth-nav-link:hover {
+  color: #2d6e2d;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.authButton {
+  border: none;
+  width: 100%;
+  background-color: #daeaf6;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.authButton:hover {
+  background-color: #88a7be;
+  transition: all 0.3s;
+}
+
+.Sign_up_avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+#toast-container {
+  position: absolute;
+  top: 130px !important;
+  right: 600px !important;
+  left: auto !important;
+}
+
+.error_Toast {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  color: white;
+  background-color: #ec1713;
+  font-family: inherit;
+}
+
+.success_Toast {
+  border-radius: 1rem;
+  padding: 1rem;
+  color: white;
+  background-color: #26a69a;
+}
+
+/* profile page css */
+.profile-container {
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+.profile-subcontainer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid gray;
+  padding-top: 10px;
+}
+
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.follow_button {
+  min-width: 100px;
+  height: 40px;
+  background-color: #2d3033;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: white;
+  border-radius: 5px;
+}
+
+.follow_button:hover {
+  background-color: black;
+}
+
+.unfollow_button {
+  width: 100px;
+  height: 40px;
+  font-size: 1rem;
+  background-color: #2d3033;
+  color: white;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.unfollow_button:hover {
+  background-color: black;
+}
+
+.profile-info-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.profile-status-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-info {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gallery {
+  margin-bottom: 4.2rem;
+}
+
+.gallery > img {
+  margin-left: 1rem;
+  height: 200px;
+  width: 200px;
+  margin-top: 1rem;
+  object-fit: cover;
+}
+
+.title_text {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.profile-info-text {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+/*  home page card css */
+.card-container {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 1rem auto;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.card-profile-info {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-items: flex-start;
+  padding: 0.5rem;
+}
+
+.card-profile-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-title > a {
+  margin-left: 2rem;
+  margin-right: 20rem;
+  text-decoration: none;
+  color: #803735;
+}
+
+.card-title > a:hover {
+  color: rgb(53, 15, 15);
+  transition: all 0.3s;
+}
+
+.card-title > .trash-icon {
+  cursor: pointer;
+}
+
+.card-title > .trash-icon:hover {
+  transform: scaleY(1.2);
+  color: #85100e;
+}
+
+.card-image {
+  margin-left: 1.2rem;
+  height: auto;
+  width: 90%;
+  object-fit: cover;
+}
+
+.card-content {
+  margin-left: 1rem;
+}
+
+.card-content > span > i {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: 0.6rem;
+}
+
+.input-comment {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  width: 70%;
+  font-size: 1rem;
+  border-bottom: 2px solid #ccc;
+  height: 100%;
+  padding: 2px 0;
+  letter-spacing: 1.4px;
+  overflow-wrap: break-word;
+}
+
+.comment-btn {
+  width: 20%;
+  letter-spacing: 1px;
+  margin-left: 1rem;
+  padding: 0.2rem;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #daeaf6;
+  background-color: rgb(26, 24, 24);
+}
+
+.comment-btn:hover {
+  background-color: #000;
+  transition: all 0.3s;
+}
+
+/* create post page css */
+.create-post-container {
+  max-width: 1000px;
+  margin: 0 auto 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.create-post-card {
+  display: flex;
+  width: 60%;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+
+.create-post-header {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.input-caption {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  width: 90%;
+  margin: 5rem 1rem 1rem;
+  color: #2d6e2d;
+  font-size: 1rem;
+  border-bottom: 2px solid #ccc;
+  height: 100%;
+  letter-spacing: 1.4px;
+  overflow-wrap: break-word;
+}
+
+.file-field > span {
+  margin: 0.5rem 1rem;
+}
+
+.post-btn {
+  color: #daeaf6;
+  background-color: rgb(54, 51, 51);
+  padding: 0.6rem;
+  margin: 0.5rem auto;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.post-btn:hover {
+  background-color: black;
+  transition: all 0.4s;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 640px) {
+  .follow_button {
+    margin-left: 2.2rem;
+  }
+
+  .profile-image {
+    margin-left: 3rem;
+  }
+
+  .update-pic > span,
+  input[type="file"] {
+    margin-left: 3rem;
+  }
+
+  .title_text {
+    font-size: 1.4rem;
+    position: absolute;
+    right: 60px;
+    letter-spacing: 0;
+  }
+
+  .profile-info > span {
+    display: none;
+  }
+
+  .gallery > img {
+    margin-left: 3.5rem;
+  }
+
+  .card-container {
+    width: 100vw;
+  }
+
+  .card-image {
+    margin: 0 auto;
+  }
+
+  .comment-btn {
+    margin-right: 1.1rem;
+  }
+
+  .create-post-card {
+    width: 100%;
+  }
+
+  .input-caption {
+    width: 90%;
+  }
+
+  .logout-btn {
+    margin: 1rem 0 0 2rem;
+  }
+
+  .card-title > a {
+    margin-right: 7.5rem;
+  }
+
+  .search-icon {
+    margin-left: 1rem;
+  }
+
+  .modal {
+    margin: 4rem 0.2rem;
+    padding: 1rem;
+  }
+}
