@@ -15,7 +15,7 @@ A shorter version of Instagram.
 
 ### Issues
 - It'a version 1.0
-- Mobile responsive is not fully achieved though for User Profile Screen
+- Mobile responsive is not fully achieved(for User Profile Screen).
 
 ### License
 The MIT License
