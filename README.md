@@ -12,6 +12,10 @@ A shorter version of Instagram.
 - User can update his/her profile picture
 - User can search for others using their email.
 
+## Login credentials
+
+- email-> testuser@gmail.com
+- password -> 123456
 
 ### Issues
 - It'a version 1.0
