@@ -27,4 +27,4 @@ A shorter version of Instagram.
 ---
 
 ## License
-The MIT License
+[MIT](https://choosealicense.com/licenses/mit/)
