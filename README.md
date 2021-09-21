@@ -1,9 +1,10 @@
 # Instagramify---Insta-clone
 A shorter version of Instagram.
 
-#### App Demo
+## App Demo
 [Instagramify](https://instagramify.herokuapp.com/)
 
+---
 
 ## Features
 - User can create post, delete post
@@ -17,9 +18,13 @@ A shorter version of Instagram.
 - Email- testuser@gmail.com
 - Password - 123456
 
-### Issues
+---
+
+## Issues
 - It'a version 1.0
 - Mobile responsive is not fully achieved(for User Profile Screen).
 
-### License
+---
+
+## License
 The MIT License
