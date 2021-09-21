@@ -14,8 +14,8 @@ A shorter version of Instagram.
 
 ## Login credentials
 
-- email- testuser@gmail.com
-- password - 123456
+- Email- testuser@gmail.com
+- Password - 123456
 
 ### Issues
 - It'a version 1.0
