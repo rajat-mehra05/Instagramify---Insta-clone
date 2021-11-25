@@ -18,7 +18,5 @@ A shorter version of Instagram.
 - Email- testuser@gmail.com
 - Password - 123456
 
----
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
