@@ -20,12 +20,5 @@ A shorter version of Instagram.
 
 ---
 
-## Issues
-- It'a version 1.0
-- Mobile responsive is not fully achieved(for User Profile Screen).
-- Feel free to create a PR to add your changes.
-
----
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
