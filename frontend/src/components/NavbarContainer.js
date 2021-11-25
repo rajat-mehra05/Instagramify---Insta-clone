@@ -33,7 +33,7 @@ const NavbarContainer = () => {
               <i className="fas fa-plus" /> Create Post
             </Link>
           </li>
-          ,
+       
           <li key="2">
             {" "}
             <Link className="nav-links" to="/profile">
